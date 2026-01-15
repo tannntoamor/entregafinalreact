@@ -1,12 +1,12 @@
-import { Link, NavLink } from 'react-router-dom'
-import CartWidget from './CartWidget'
+import { Link, NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   const categories = [
-    { id: 'remeras', label: 'Remeras' },
-    { id: 'buzos', label: 'Buzos' },
-    { id: 'accesorios', label: 'Accesorios' },
-  ]
+    { id: "remeras", label: "Remeras" },
+    { id: "buzos", label: "Buzos" },
+    { id: "accesorios", label: "Accesorios" },
+  ];
 
   return (
     <header className="navbar">
@@ -20,7 +20,7 @@ const NavBar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+            isActive ? "navbar__link navbar__link--active" : "navbar__link"
           }
         >
           Inicio
@@ -31,7 +31,7 @@ const NavBar = () => {
             key={cat.id}
             to={`/category/${cat.id}`}
             className={({ isActive }) =>
-              isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+              isActive ? "navbar__link navbar__link--active" : "navbar__link"
             }
           >
             {cat.label}
@@ -41,7 +41,7 @@ const NavBar = () => {
 
       <CartWidget />
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
